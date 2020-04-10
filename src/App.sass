@@ -1,22 +1,63 @@
-body, #root
-  --he: 969px
-  position: relative
-  background-color: #282c34
-  width: 100vw
-  height: var(--he)
-  overflow: hidden
-  .Box-runner
-    width: 300px
-    height: 300px
-    background-color: #fff8
-    border-radius: 100%
-    border: 5px solid #ffffff
-    box-sizing: border-box
-    display: flex
-    justify-content: center
-    align-items: center
-    font-size: 40pt
-    color: #fff
+*
+    transition: .1s ease-in-out;
+    user-select: none; 
 
+a 
+    text-decoration: none;
+    color: inherit
 
+#root
+    position: relative
+    .GridTest__gridContainer
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        position: absolute
+        height: 100vh
+        width: 100vw
+        .GridTest__gridInterface
+            width: 100%
+            height: 20%
+            display: flex
+            align-items: center
+            justify-content: center
+            box-shadow: 0 0 10px rgba(0,0,0,0.5)
+            .GridTest__gridInterface_count
+                margin: 0 30px
+            .GridTest__gridInterface_buttonPlus,
+            .GridTest__gridInterface_buttonNeg
+                background: #7d1f69
+                height: 35px
+                width: 35px
+                border-radius: 100%
+                color: #ffffff
+                display: inline-flex
+                justify-content: center
+                align-items: baseline
+                font-size: 24px
+                cursor: pointer
+                &:hover
+                    background: #ffffff
+                    color: #7d1f69
 
+.GridCont__Cont
+    height: 40%
+    width: 40%
+    display: grid
+    grid-gap: 1px
+    grid-template-columns: repeat(2, 4fr)
+    grid-template-rows: repeat(2, 4fr)
+    grid-auto-columns: 1
+    grid-auto-rows: 4fr
+    .GridCont__Ceil
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 3px solid #ce1774
+        border-radius: 1%
+        background: #ce1774
+        color: #FFF
+        cursor: pointer
+        &:hover
+            background: #ffffff
+            color: #ce1774
