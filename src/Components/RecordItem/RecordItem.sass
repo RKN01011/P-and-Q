@@ -1,0 +1,37 @@
+@mixin item-style
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  min-height: 30px
+  height: 10%
+  padding: 20px
+
+  background-color: aliceblue
+  box-shadow: 0 0 10px -5px
+  border-radius: 0 10px 20px 0
+  cursor: pointer
+
+  transform: scale(0.98) translateX(-5px)
+  transition: .2s ease-in
+
+  &:hover
+    position: relative
+    z-index: 1
+    transform: scale(.99)
+
+  &-postName
+    font-size: 200%
+
+  &-textContent
+    flex: 2
+    overflow: hidden
+    text-overflow: ellipsis
+    color: #8991A1
+
+.Diary_root__ListOfEntries_item
+  @include item-style
+
+.Diary_root__ListOfEntries_item-edith
+  @include item-style
+
